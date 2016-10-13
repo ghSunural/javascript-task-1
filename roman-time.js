@@ -15,12 +15,8 @@ function romanTime(time) {
     var hours;
     var minutes;
 
-    try {
-        hours = parseInt((time.split(':', 2))[0], 10);
-        minutes = parseInt((time.split(':', 2))[1], 10);
-    } catch (e) {
-        throw new TypeError('Неверное время');
-    }
+    hours = parseInt((time.split(':', 2))[0], 10);
+    minutes = parseInt((time.split(':', 2))[1], 10);
 
     if (isNotValidHours(hours) || isNotValidMinutes(minutes)) {
         throw new TypeError('Неверное время');
